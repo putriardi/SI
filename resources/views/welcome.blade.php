@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- <link rel="shortcut icon" href="images/star.png" type="favicon/ico" /> -->
 
-        <title>Mamma's Kitchen</title>
+        <title>STRESSLESS</title>
 
         <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/css/font-awesome.min.css') }}">
@@ -443,7 +443,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="menu-item">
-                                        <h3 class="menu-title">French Bread</h3>
+                                        <h3 class="menu-title">Oncom</h3>
                                         <p class="menu-about">Astronomy compels the soul</p>
 
                                         <div class="menu-system">
@@ -460,7 +460,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="menu-item">
-                                        <h3 class="menu-title">Italian Bread</h3>
+                                        <h3 class="menu-title">Tempe</h3>
                                         <p class="menu-about">Astronomy compels the soul</p>
 
                                         <div class="menu-system">
@@ -477,7 +477,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="menu-item">
-                                        <h3 class="menu-title">Regular Bread</h3>
+                                        <h3 class="menu-title">Nasi Goreng</h3>
                                         <p class="menu-about">Astronomy compels the soul</p>
 
                                         <div class="menu-system">
@@ -502,7 +502,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="menu-item">
-                                        <h3 class="menu-title">Regular Tea</h3>
+                                        <h3 class="menu-title">Mie Goreng</h3>
                                         <p class="menu-about">Astronomy compels the soul</p>
 
                                         <div class="menu-system">
@@ -519,7 +519,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="menu-item">
-                                        <h3 class="menu-title">Garlic Tea</h3>
+                                        <h3 class="menu-title">Bawang Goreng</h3>
                                         <p class="menu-about">Astronomy compels the soul</p>
 
                                         <div class="menu-system">
@@ -536,7 +536,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="menu-item">
-                                        <h3 class="menu-title">Black Coffee</h3>
+                                        <h3 class="menu-title">Kopi Hitam</h3>
                                         <p class="menu-about">Astronomy compels the soul</p>
 
                                         <div class="menu-system">
@@ -561,7 +561,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="menu-item">
-                                        <h3 class="menu-title">Bacon</h3>
+                                        <h3 class="menu-title">Daging</h3>
                                         <p class="menu-about">Astronomy compels the soul</p>
 
                                         <div class="menu-system">
@@ -578,7 +578,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="menu-item">
-                                        <h3 class="menu-title">Sausage</h3>
+                                        <h3 class="menu-title">Sosis</h3>
                                         <p class="menu-about">Astronomy compels the soul</p>
 
                                         <div class="menu-system">
@@ -595,7 +595,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="menu-item">
-                                        <h3 class="menu-title">Chicken Balls</h3>
+                                        <h3 class="menu-title">Jengkol</h3>
                                         <p class="menu-about">Astronomy compels the soul</p>
 
                                         <div class="menu-system">
@@ -620,7 +620,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="menu-item">
-                                        <h3 class="menu-title">Chicken Balls</h3>
+                                        <h3 class="menu-title">Pete</h3>
                                         <p class="menu-about">Astronomy compels the soul</p>
 
                                         <div class="menu-system">
@@ -637,7 +637,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="menu-item">
-                                        <h3 class="menu-title">Bacon</h3>
+                                        <h3 class="menu-title">Telur Gulung</h3>
                                         <p class="menu-about">Astronomy compels the soul</p>
 
                                         <div class="menu-system">
@@ -654,7 +654,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="menu-item">
-                                        <h3 class="menu-title">Sausage</h3>
+                                        <h3 class="menu-title">Nasi Uduk</h3>
                                         <p class="menu-about">Astronomy compels the soul</p>
 
                                         <div class="menu-system">
@@ -845,9 +845,9 @@
                     </div>
                     <div class="col-xs-6 col-sm-6 dis-table-cell">
                         <div class="section-content">
-                            <p>16th Birn street Get Plaza (4th floar) USA</p>
-                            <p>+44 12 213584</p>
-                            <p>example@mail.com </p>
+                            <p>Jalan Alternatif Babakan Tengah</p>
+                            <p>085272564646</p>
+                            <p>Stressless@gmail.com</p>
                         </div>
                     </div>
                 </div>
