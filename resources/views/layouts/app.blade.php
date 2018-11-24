@@ -18,8 +18,9 @@
 
     <!-- Styles -->
     <!--     Fonts and icons     -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
   <!-- CSS Files -->
   <link href="{{ asset('backend/css/material-dashboard.css?v=2.1.0') }}" rel="stylesheet" />
   <link href="{{ asset('backend/css/material-dashboard.css.map') }}" rel="stylesheet" />
@@ -61,6 +62,13 @@
   <script src="{{ asset('backend/js/material-dashboard.min.js?v=2.1.0') }}" type="text/javascript"></script>
   <!-- Material Dashboard DEMO methods, don't include it in your project! -->
   <script src="{{ asset('backend/demo/demo.js') }}"></script>
+  <script> src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"</script>
+    <script> src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"</script>
+    <script>
+        $(document).ready(function() {
+            $('#table').DataTable();
+        } );
+    </script>
   <script>
     $(document).ready(function() {
       // Javascript method's body can be found in assets/js/demos.js
