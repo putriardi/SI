@@ -28,8 +28,8 @@
 
 
 
-        <script src="js/jquery-1.11.2.min.js"></script>
-        <script type="text/javascript" src="js/jquery.flexslider.min.js"></script>
+        <script src="{{ asset('frontend/js/jquery-1.11.2.min.js') }}"></script>"
+        <script type="text/javascript" src="{{ asset('frontend/js/jquery.flexslider.min.js') }}"></script>
         <script type="text/javascript">
             $(window).load(function() {
                 $('.flexslider').flexslider({
