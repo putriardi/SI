@@ -8,6 +8,6 @@ class Item extends Model
 {
     public function category()
     {
-    	return $this->belongsTo('Apps\Category');
+    	return $this->belongsTo('App\Category');
     }
 }
