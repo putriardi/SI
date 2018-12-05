@@ -14,12 +14,24 @@
             @include('layouts.partial.msg')
               <div class="card">
                 <div class="card-header card-header-primary">
-                  <h4 class="card-title ">Add New Category</h4>
+                  <h4 class="card-title ">Add New Item</h4>
                 </div>
                 <div class="card-body">
                   <div class="card-content">
-                    <form method="POST" action="{{ route('category.store') }}" enctype="multipart/form-data">
+                    <form method="POST" action="{{ route('item.store') }}" enctype="multipart/form-data">
                     @csrf
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group label-floating">
+                                <label class="control-label">Category</label>
+                                <select class="form-control" name="category">
+                                  @foreach($categories as $category)
+                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
+                                  @endforeach
+                                </select>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-md-12">
                             <div class="form-group label-floating">
@@ -28,7 +40,30 @@
                             </div>
                         </div>
                     </div>
-                    <a href="{{ route('category.index') }}" class="btn btn-danger">Back</a>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group label-floating">
+                                <label class="control-label">Description</label>
+                               <textarea class="form-control" name="description"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group label-floating">
+                                <label class="control-label">Price</label>
+                              <input type="number" class="form-control" name="price">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <label class="control-label">Image</label>
+                              <input type="file" name="image">
+                            </div>
+                        </div>
+                    </div>
+                    <a href="{{ route('item.index') }}" class="btn btn-danger">Back</a>
                     <button type="submit" class="btn btn-primary">Save</button>
                     </form>
                   </div>
