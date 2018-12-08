@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="{{ asset('frontend/css/flexslider.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/css/pricing.css') }}">
         <link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('frontend/css/bootstrap-datetimepicker.min.css') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
         <style>
         @foreach($sliders as $key=>$slider)
             .owl-carousel .owl-wrapper, .owl-carousel .owl-item:nth-child({{ $key + 1 }}) .item
@@ -126,13 +128,11 @@
                             <div class="row">
                                 <div class="col-md-10 col-md-offset-1">
                                     <div class="section-header">
-                                        <h2 class="pricing-title"> Our Menu List in Stressless </h2>
+                                        <h2 class="pricing-title">Our Menu</h2>
                                         <ul id="filter-list" class="clearfix">
                                             <li class="filter" data-filter="all">All</li>
                                             @foreach($categories as $category)
-                                            <li class="filter" data-filter="#{{ $category->slug }}">
-                                            {{ $category->name }}<span class="badge"> {{
-                                            $category-> items->count() }} </span> </li>
+                                                <li class="filter" data-filter="#{{ $category->slug }}">{{ $category->name }} <span class="badge">{{ $category->items->count() }}</span></li>
                                             @endforeach
                                         </ul><!-- @end #filter-list -->
                                     </div>
@@ -146,22 +146,19 @@
                     <div class="row">  
                         <div class="col-md-10 col-md-offset-1">
                             <ul id="menu-pricing" class="menu-price">
-                                 
                                 @foreach($items as $item)
                                 <li class="item" id="{{ $item->category->slug }}">
                                     <a href="#">
-                                        <img src="{{ asset('uploads/item/'.$item->image) 
-                                        }}" class="img-responsive" alt="Item">
+                                        <img src="{{ asset('uploads/item/'.$item->image) }}" class="img-responsive" alt="Item" style="height: 300px; width: 369px;">
                                         <div class="menu-desc text-center">
                                             <span>
-                                                <h3>{{ $item->name}}}</h3>
-                                                {{ $item->description }}}
+                                                <h3>{{ $item->name }}</h3>
+                                                {{ $item->description }}
                                             </span>
                                         </div>
-                                    </a>
-                                    <h2 class="white">{{ $item->price}}0</h2>
-                                </li> 
-
+                                    </a>                                        
+                                    <h2 class="white">Rp.{{ $item->price }}</h2>
+                                </li>
                                 @endforeach
                             </ul>
 
@@ -612,7 +609,7 @@
 
         <!--== 15. Reserve A Table! ==-->
         <section id="reserve" class="reserve">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/icons/reserve_black.png">
+            <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{asset('frontend/images/icons/reserve_black.png') }}">
             <div class="wrapper">
                 <div class="container-fluid">
                     <div class="row dis-table">
@@ -630,34 +627,35 @@
 
 
         <section class="reservation">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="images/icons/reserve_color.png">
+            <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{asset('frontend/images/icons/reserve_colour.png') }}">
             <div class="wrapper">
                 <div class="container-fluid">
                     <div class=" section-content">
                         <div class="row">
                             <div class="col-md-5 col-sm-6">
-                                <form class="reservation-form" method="post" action="reserve.php">
+                                <form class="reservation-form" method="post" action="{{ route('reservation.reserve') }}">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-md-6 col-sm-6">
                                             <div class="form-group">
-                                                <input type="text" class="form-control reserve-form empty iconified" name="name" id="name" required="required" placeholder="  &#xf007;  Name">
+                                                <input type="text" class="form-control reserve-form empty iconified" name="name" id="name" placeholder="  &#xf007;  Name">
                                             </div>
+
                                             <div class="form-group">
-                                                <input type="email" name="email" class="form-control reserve-form empty iconified" id="email" required="required" placeholder="  &#xf1d8;  e-mail">
+                                                <input type="email" name="email" class="form-control reserve-form empty iconified" id="email" placeholder="  &#xf1d8;  e-mail">
                                             </div>
                                         </div>
-
                                         <div class="col-md-6 col-sm-6">
                                             <div class="form-group">
-                                                <input type="tel" class="form-control reserve-form empty iconified" name="phone" id="phone" required="required" placeholder="  &#xf095;  Phone">
+                                                <input type="tel" class="form-control reserve-form empty iconified" name="phone" id="phone" placeholder="  &#xf095;  Phone">
                                             </div>
                                             <div class="form-group">
-                                                <input type="text" class="form-control reserve-form empty iconified" name="datepicker" id="datepicker" required="required" placeholder="&#xf017;  Time">
+                                                <input type="text" class="form-control reserve-form empty iconified" name="dateandtime" id="datetimepicker1" placeholder="&#xf017;  Time">
                                             </div>
                                         </div>
 
                                         <div class="col-md-12 col-sm-12">
-                                            <textarea type="text" name="message" class="form-control reserve-form empty iconified" id="message" rows="3" required="required" placeholder="  &#xf086;  We're listening"></textarea>
+                                            <textarea type="text" name="message" class="form-control reserve-form empty iconified" id="message" rows="3" placeholder="&#xf086;  We're listening"></textarea>
                                         </div>
 
                                         <div class="col-md-12 col-sm-12">
@@ -797,7 +795,27 @@
         <script type="text/javascript" src="{{ asset('frontend/js/jquery.hoverdir.js') }}"></script>
         <script type="text/javascript" src="{{ asset('frontend/js/jQuery.scrollSpeed.js') }}"></script>
         <script src="{{ asset('frontend/js/script.js') }}"></script>
-        
+        <script src="{{ asset('frontend/js/bootstrap-datetimepicker.min.js') }}"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
+        @if ($errors->any())
+        @foreach ($errors->all() as $error)
+        <script>
+            toastr.error('{{ $error }}');
+        </script>
+        @endforeach
+        @endif
+
+        <script>
+            $(function () {
+                $('#datetimepicker1').datetimepicker({
+                    format: "dd MM yyyy - HH:11 P",
+                    showMeridian: true,
+                    autoclose: true,
+                    todayBtn: true
+                });
+            })
+    </script>
+    {!! Toastr::message() !!}
     </body>
 </html>

@@ -93,8 +93,7 @@ class ItemController extends Controller
     {
         $item = Item::find($id);
         $categories = Category::all();
-        return view('admin.item.edit', compact('item','categories'));
-        
+        return view('admin.item.edit',compact('item', 'categories'));
     }
 
     /**
@@ -130,7 +129,7 @@ class ItemController extends Controller
         }else{
             $imagename = $item->image;
         }
-        
+       
         $item->category_id = $request->category;
         $item->name = $request->name;
         $item->description = $request->description;
@@ -149,11 +148,11 @@ class ItemController extends Controller
     public function destroy($id)
     {
         $item = Item::find($id);
-        if(file_exists('uploads/item/'.$item->image))
+        if (file_exists('uploads/item/'.$item->image))
         {
-            unlink('uploads/item/'. $item->image); 
+            unlink('uploads/item/'. $item->image);
         }
         $item->delete();
-        return redirect()->back()->with('successMsg', 'Item successfully Deleted' );
+        return redirect()->back()->with('successMsg', 'Item successfully Deleted');
     }
 }
