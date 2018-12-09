@@ -5,8 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Reservation;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Toastr, Input, Redirect; 
-
+use Toastr, Input, Redirect;
 
 class ReservationController extends Controller
 {
