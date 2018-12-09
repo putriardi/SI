@@ -48,8 +48,18 @@
                                 </th>
                                 <td>{{ $reservation->created_at }}</td>
                                 <td>
-                                <a href="" class="btn-info btn-sm"><i class="material-icons">mode_edit</i></a>
-
+                                  @if($reservation->status == false)  
+                                      <form id="status-form-{{ $reservation->id }}" 
+                                      action="{{ route('reservation.status', $reservation->id)}}" style="" method="POST">
+                                      @csrf
+                                      </form>
+                                    <button type="button" class="btn btn-info btn-sm" onclick="if(confirm('Are you verify this request by phone?')){
+                                      event.preventDefault();
+                                      document.getElementById('status-form-{{ $reservation->id }}').submit();
+                                    }else {
+                                      event.preventDefault();
+                                    }"><i class="material-icons">done</i></button>
+                                  @endif
                                   <form id="delete-form-{{ $reservation->id }}" 
                                   action="" style="..." method="POST">
                                   @csrf
