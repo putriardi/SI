@@ -61,7 +61,7 @@
                                     }"><i class="material-icons">done</i></button>
                                   @endif
                                   <form id="delete-form-{{ $reservation->id }}" 
-                                  action="" style="..." method="POST">
+                                  action="{{ route('reservation.destory', $reservation->id)}}" style="..." method="POST">
                                   @csrf
                                   @method('DELETE')
                                   </form>
