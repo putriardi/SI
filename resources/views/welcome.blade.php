@@ -57,7 +57,6 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">
-                        <img id="logo" src="images/Logo_main.png" class="logo img-responsive">
                     </a>
                 </div>
 
@@ -101,12 +100,12 @@
                         </div>
                         <div class="col-xs-12 col-sm-6 dis-table-cell">
                             <div class="section-content">
-                                <h2 class="section-content-title">About us</h2>
+                                <h2 class="section-content-title">StressLess</h2>
                                 <p class="section-content-para">
-                                    Astronomy compels the soul to look upward, and leads us from this world to another.  Curious that we spend more time congratulating people who have succeeded than encouraging people who have not. As we got further and further away, it [the Earth] diminished in size.
+                                   Hai! Kebanyakan dari kita selalu berfikiran negatif atas apa yang terjadi. Akibatnya, stress mendatangi. Pusing, lelah, takut. Sekali-kali, berfikirlah positif. Dengan berfikiran positif, maka seluruh bagian tubuhmu akan bekerja dengan maksimal, dan kau akan terhindari dari stress. Karena itu lah maka kita harus? Streessless!
                                 </p>
                                 <p class="section-content-para">
-                                    beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.  Where ignorance lurks, so too do the frontiers of discovery and imagination.
+                                    Stressless adalah sebuah tempat, dimana Anda, siapapun, dengan apapun kesibukkan Anda, dapat menikmati suasana yang nyaman, tanpa stress, dengan ditemani sajian-sajian kami yang khas, enak dan murah.
                                 </p>
                             </div> <!-- /.section-content -->
                         </div>
@@ -146,7 +145,7 @@
                                 @foreach($items as $item)
                                 <li class="item" id="{{ $item->category->slug }}">
                                     <a href="#">
-                                        <img src="{{ asset('uploads/item/'.$item->image) }}" class="img-responsive" alt="Item" style="height: 300px; width: 369px;">
+                                        <img src="{{ asset('uploads/item/'.$item->image) }}" class="img-responsive" alt="Item" style="height: 200px; width: 300px;">
                                         <div class="menu-desc text-center">
                                             <span>
                                                 <h3>{{ $item->name }}</h3>
@@ -191,7 +190,7 @@
 
 
         <section class="reservation">
-            <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{asset('frontend/images/icons/reserve_colour.png') }}">
+        <img class="img-responsive section-icon hidden-sm hidden-xs" src="{{asset('frontend/images/icons/reserve_color.png') }}">
             <div class="wrapper">
                 <div class="container-fluid">
                     <div class=" section-content">
@@ -238,18 +237,19 @@
                             <div class="col-md-4 col-sm-6 col-xs-12">
                                 <div class="opening-time">
                                     <h3 class="opening-time-title">Hours</h3>
-                                    <p>Mon to Fri: 7:30 AM - 11:30 AM</p>
-                                    <p>Sat & Sun: 8:00 AM - 9:00 AM</p>
+                                    <h4>Opening</h4>
+                                    <p>Mon to Fri: 11:00 AM</p>
+                                    <p>Sat & Sun: 9:00 AM</p>
 
                                     <div class="launch">
                                         <h4>Lunch</h4>
-                                        <p>Mon to Fri: 12:00 PM - 5:00 PM</p>
+                                        <p>Mon to Sun: 12:00 PM - 5:00 PM</p>
                                     </div>
 
                                     <div class="dinner">
                                         <h4>Dinner</h4>
-                                        <p>Mon to Sat: 6:00 PM - 1:00 AM</p>
-                                        <p>Sun: 5:30 PM - 12:00 AM</p>
+                                        <p>Mon to Sat: 6:00 PM - 11:00 PM</p>
+                                        <p>Sun: 5:30 PM - 1:00 AM</p>
                                     </div>
                                 </div>
                             </div>
@@ -272,8 +272,9 @@
                     <div class="col-xs-6 col-sm-6 dis-table-cell">
                         <div class="section-content">
                             <p>Jalan Alternatif Babakan Tengah</p>
+                            <p>Dramaga Bogor</p>
                             <p>085272564646</p>
-                            <p>Stressless@gmail.com</p>
+                            <p>projekstressless@gmail.com</p>
                         </div>
                     </div>
                 </div>
@@ -335,9 +336,8 @@
                     <div class="col-md-6 col-md-offset-3">
                         <div class="copyright text-center">
                             <p>
-                                &copy; Copyright, 2018 <a href="#">Stressless. </a> Develop by 
-                                <a href="https://cipfahim.github.io"> MD.AMINUL ISLAM FAHIM</a> Theme by <a href="http://themewagon.com/"  target="_blank">ThemeWagon</a>
-                            </p>
+                                &copy; Copyright, 2018 <a href="#">Stressless. </a>
+                                </p>
                         </div>
                     </div>
                 </div>
@@ -367,7 +367,7 @@
         <script>
             $(function () {
                 $('#datetimepicker1').datetimepicker({
-                    format: "dd MM yyyy - HH:11 P",
+                    format: "dd MM yyyy - HH:00 P",
                     showMeridian: true,
                     autoclose: true,
                     todayBtn: true

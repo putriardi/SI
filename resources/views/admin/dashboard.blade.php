@@ -23,7 +23,7 @@
                 <div class="card-footer">
                   <div class="stats">
                     <i class="material-icons text-danger">Info</i>
-                    <a href="#pablo">Total Category and Items</a>
+                    <a href="{{ route('item.index')}}">Total Category and Items</a>
                   </div>
                 </div>
               </div>
@@ -64,7 +64,7 @@
               <div class="card card-stats">
                 <div class="card-header card-header-info card-header-icon">
                   <div class="card-icon">
-                    <i class="fa fa-twitter"></i>
+                    <i class="fa fa-inbox"></i>
                   </div>
                   <p class="card-category">Contact</p>
                   <h3 class="card-title">{{ $contactCount }}</h3>

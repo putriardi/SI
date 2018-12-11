@@ -5,7 +5,7 @@
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo">
-        <a href="{{ route('admin.dashboard')}}}" class="simple-text logo-normal">
+        <a href="{{ route('admin.dashboard')}}" class="simple-text logo-normal">
           Stressless
         </a>
       </div>
@@ -47,12 +47,7 @@
               <p>Contacts Message</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./notifications.html">
-              <i class="material-icons">notifications</i>
-              <p>Notifications</p>
-            </a>
-          </li>
+         
           <!-- <li class="nav-item active-pro ">
                 <a class="nav-link" href="./upgrade.html">
                     <i class="material-icons">unarchive</i>
