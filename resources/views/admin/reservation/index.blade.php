@@ -3,7 +3,7 @@
 @section('title','Reservation')
 
 @push('css')
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js">
+ 
 @endpush 
 
 @section('content')
@@ -87,11 +87,5 @@
 
 
 @push('scripts')
-  <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-  <script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap.min.js"></script>
-  <script>
-    $(document).ready(function(){
-      $('#table').DataTable();
-    });  
-  </script>
+  
 @endpush
