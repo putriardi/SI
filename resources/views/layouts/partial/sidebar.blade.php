@@ -5,8 +5,8 @@
         Tip 2: you can also add an image using data-image tag
     -->
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          Creative Tim
+        <a href="{{ route('admin.dashboard')}}" class="simple-text logo-normal">
+          Stressless
         </a>
       </div>
       <div class="sidebar-wrapper">
@@ -35,24 +35,19 @@
               <p>Items</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./icons.html">
-              <i class="material-icons">bubble_chart</i>
-              <p>Icons</p>
+          <li class="{{ Request::is('admin/reservation*') ? 'active':'' }}">
+            <a class="nav-link" href="{{ route('reservation.index') }}">
+              <i class="material-icons">chrome_reader_mode</i>
+              <p>Reservations</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./map.html">
-              <i class="material-icons">location_ons</i>
-              <p>Maps</p>
+          <li class="{{ Request::is('admin/contact*') ? 'active':'' }}">
+            <a class="nav-link" href="{{ route('contact.index') }}">
+              <i class="material-icons">message</i>
+              <p>Contacts Message</p>
             </a>
           </li>
-          <li class="nav-item ">
-            <a class="nav-link" href="./notifications.html">
-              <i class="material-icons">notifications</i>
-              <p>Notifications</p>
-            </a>
-          </li>
+         
           <!-- <li class="nav-item active-pro ">
                 <a class="nav-link" href="./upgrade.html">
                     <i class="material-icons">unarchive</i>
