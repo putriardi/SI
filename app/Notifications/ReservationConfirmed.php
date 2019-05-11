@@ -42,6 +42,7 @@ class ReservationConfirmed extends Notification
     {
         return (new MailMessage)
         ->line('Your reservation has been confirmed.')
+        ->line('Late for 15 minutes means you cancelled your reservation.')
         ->line('Thank you for using our application!');
     }
 

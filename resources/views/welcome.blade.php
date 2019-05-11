@@ -57,6 +57,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">
+                    <img id="logo" src="{{ asset('frontend/images/Logo_main.png') }}" class="logo img-responsive">
                     </a>
                 </div>
 
@@ -145,7 +146,7 @@
                                 @foreach($items as $item)
                                 <li class="item" id="{{ $item->category->slug }}">
                                     <a href="#">
-                                        <img src="{{ asset('uploads/item/'.$item->image) }}" class="img-responsive" alt="Item" style="height: 200px; width: 300px;">
+                                        <img src="{{ asset('uploads/item/'.$item->image) }}" class="img-responsive" alt="Item" style="height: 250px; width: 300px;">
                                         <div class="menu-desc text-center">
                                             <span>
                                                 <h3>{{ $item->name }}</h3>
@@ -284,7 +285,7 @@
                             <ul class="center-block">
                                 <li><a href="#" class="fb"></a></li>
                                 <li><a href="#" class="twit"></a></li>
-                                <li><a href="#" class="g-plus"></a></li>
+                                <li><a href="https://plus.google.com/u/2/117097077557816212394?pageId=none" class="g-plus" class="g-plus"></a></li>
                                 <li><a href="#" class="link"></a></li>
                             </ul>
                         </div>

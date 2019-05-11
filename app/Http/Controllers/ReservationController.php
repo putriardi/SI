@@ -8,9 +8,10 @@ class ReservationController extends Controller
     public function reserve(Request $request){
     	$this->validate($request,[
     		'name' => 'required',
-    		'phone' => 'required',
+    		'phone' => 'required|regex:/(08)[0-9]{10}/',
     		'email' => 'required|email',
-    		'dateandtime' => 'required'
+			'dateandtime' => 'required',
+			'message' => 'required'
     	]);
     	$reservation = new Reservation();
     	$reservation->name = $request->name;
